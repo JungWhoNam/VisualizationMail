@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width">
+	<style>
+	.button {
+	  background-color: #008CBA;
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	}
+	</style>
+</head>
+
+<body>
+	<video controls="" autoplay="" name="media" class="center">
+		<source src="video.mp4" type="video/mp4">
+		<track kind="subtitles" srclang="en" src="subtitle.vtt" default>
+	</video>
+	
+	<p>
+		<button class="button" id="myButton" type="button">Open in V-Mail</button>
+	</p>
+	
+	<script type="text/javascript">
+		document.getElementById("myButton").onclick = function () {
+			location.href = "vmail://" + window.location.href;
+		};
+	</script>
+	
+	<!--h2>View the message</h2-->
+	<!--p><a href="video.mp4">Open in a video player (mp4)</a></p-->
+	<!--p><a href="playlist.m3u">Open a video playlist (m3u)</a></p-->
+
+	<!-- <h2>Software Installation</h2> -->
+	<!-- <p><a href="html_images.asp">Desktop application</a></p> -->
+	<!-- <p><a href="html_images.asp">Android application</a></p> -->
+</body>
+
+</html>
