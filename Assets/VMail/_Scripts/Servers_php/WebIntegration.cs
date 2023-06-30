@@ -155,7 +155,7 @@ namespace VMail.Utils.Web
             {
                 yield return www.SendWebRequest();
 
-                if (www.isNetworkError || www.isHttpError)
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
                 {
                     Debug.Log(www.error);
                 }
@@ -412,7 +412,7 @@ namespace VMail.Utils.Web
             {
                 yield return www.SendWebRequest();
 
-                if (www.isNetworkError || www.isHttpError)
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
                 {
                     Debug.LogWarning(www.error);
                     this.onInsertedVMailsTable.Invoke(-1, name);
@@ -447,7 +447,7 @@ namespace VMail.Utils.Web
             {
                 yield return www.SendWebRequest();
 
-                if (www.isNetworkError || www.isHttpError)
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
                 {
                     Debug.LogWarning(www.error);
 
@@ -490,7 +490,7 @@ namespace VMail.Utils.Web
                     this.progressBar.Close();
                 }
 
-                if (www.isNetworkError || www.isHttpError)
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
                 {
                     Debug.LogWarning(www.error);
                     this.onCopiedCompleted.Invoke(-1);
@@ -521,7 +521,7 @@ namespace VMail.Utils.Web
             {
                 yield return www.SendWebRequest();
 
-                if (www.isNetworkError || www.isHttpError)
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
                 {
                     Debug.LogWarning(www.error);
                 }
@@ -544,7 +544,7 @@ namespace VMail.Utils.Web
                 yield return www.SendWebRequest();
 
                 // check for errors
-                if (www.isNetworkError || www.isHttpError)
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
                 {
                     Debug.LogWarning(www.error);
                 }
@@ -684,7 +684,7 @@ namespace VMail.Utils.Web
                 yield return www.SendWebRequest();
 
                 // check for errors
-                if (www.isNetworkError || www.isHttpError)
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
                 {
                     Debug.LogWarning(www.error);
                     callback(false);

@@ -33,7 +33,7 @@ namespace VMail
 
             foreach (GameObject obj in this.dataVisToOnOff)
             {
-                if (obj.activeSelf != v)
+                if (obj != null && obj.activeSelf != v)
                 {
                     obj.SetActive(v);
                 }
