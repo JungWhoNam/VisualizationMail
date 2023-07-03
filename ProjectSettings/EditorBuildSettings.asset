@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/VMail/Demos/Dummy/Dummy Demo - VMail.unity
     guid: 3f68dbe7199ce884bbd650e5ca6f3b65
+  - enabled: 0
+    path: Assets/VMail/_Scenes/Vmail - Android.unity
+    guid: ce8e579c4a703e548a98c0e61cc8805c
   m_configObjects: {}
