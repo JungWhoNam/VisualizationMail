@@ -6,18 +6,18 @@ V-Mail is  a framework of cross-platform applications, interactive techniques, a
     * https://github.com/JungWhoNam/VisualizationMail
 * V-Mail Server
     * https://github.com/JungWhoNam/VisualizationMailServer
-<!-- * Integration to a data visualization application
-    * https://github.com/JungWhoNam/BrainTensorVis -->
+* Integration to a data visualization application
+    * https://github.com/JungWhoNam/BrainTensorVis/tree/vmail
 
 # PC/Mac, Android V-Mail Clients
 <div id="image-table">
     <table>
 	    <tr>
     	    <td style="padding:4px">
-        	    <img src="Images/Client0.png" width="600"/>
+        	    <img src="images/Client0.png" width="600"/>
       	    </td>
             <td style="padding:4px">
-            	<img src="Images/MobileApp1.png" width="600"/>
+            	<img src="images/MobileApp1.png" width="600"/>
             </td>
         </tr>
     </table>
@@ -34,7 +34,7 @@ This Unity project provides implemention of two V-Mail clients.
 
 # Integrating V-Mail into another Unity project
 ## Import V-Mail
-These directories should be present in your project: `VMail`, `StreamingAssets`, and `Plugins`.
+These directories should be in your project: `VMail`, `StreamingAssets/VMail, StreamingAssets/ffmpeg`, and `Plugins/Android`.
 
 ## Configure Unity project
 ### Add `TextMeshPro`
@@ -56,10 +56,10 @@ These directories should be present in your project: `VMail`, `StreamingAssets`,
     <table>
 	    <tr>
     	    <td style="padding:4px">
-        	    <img src="Images/ViewerExploratoryVis.png" width="600"/>
+        	    <img src="images/ViewerExploratoryVis.png" width="600"/>
       	    </td>
             <td style="padding:4px">
-            	<img src="Images/dataVisToOnOff.png" width="600"/>
+            	<img src="images/dataVisToOnOff.png" width="600"/>
             </td>
         </tr>
     </table>
@@ -68,24 +68,26 @@ These directories should be present in your project: `VMail`, `StreamingAssets`,
 * Implement `VisIntegrator` and `VisStateComparator` and assigns these into `ViewerExploratoryVis` (left). 
 * Assign GameObject(s) that contain your data visualization to `dataVisToOnOff` in your implementation of `VisIntegrator` (right). These objects will be turned off in the story mode. Also, these will be off when opening a menu panel for uploading or downloading a V-Mail.
 
+## Configure Main Camera
+* Set Camera's `Viewport Rect 'Y'` to `0.2593` and `Viewport Rect 'H'` to `0.7407`.
+* Set HDR property of Camera to `Use Graphics Settings` (instead of `Off`);
+
 ## Integrate the camera navigation
 <div id="image-table">
     <table>
 	    <tr>
     	    <td style="padding:4px">
-        	    <img src="Images/CamMoveAroundOrigin.png" width="600"/>
+        	    <img src="images/CamMoveAroundOrigin.png" width="600"/>
       	    </td>
             <td style="padding:4px">
-            	<img src="Images/ManagerDesktop.png" width="600"/>
+            	<img src="images/ManagerDesktop.png" width="600"/>
             </td>
         </tr>
     </table>
 </div>
 
-* Attach `VMail/_Scripts/Utils/CamMoveAroundOrigin.cs` to a GameObject and configure the parameters. Make sure to add an event to `On Interacted()` and set `ViewerModeTracker.SetExploreView` (left). 
+* Attach `VMail/_Scripts/Utils/CamMoveAroundOrigin.cs` to a GameObject and configure the parameters. Make sure to add an event to `OnInteracted()` and set `ViewerModeTracker.SetExploreView` (left). 
 * Link the GameObject with `CamMoveAroundOrigin` as `Nav` in `ManagerDesktop` (right).
-
-
 
 # Changing the V-Mail Server
 Change values of these variables to link your own server.
@@ -96,8 +98,6 @@ Change values of these variables to link your own server.
 # Deep Linking
 * See https://docs.unity3d.com/Manual/deep-linking.html for setting deep linking features for different platforms.
 * See `VMail/_Scripts/Utils/DeepLinkIntegration.cs` for processing a deep URL.
-
-
 
 # Known Issues
 ‘ffmpeg’ can't be opened because it's from an unidentified developer.
