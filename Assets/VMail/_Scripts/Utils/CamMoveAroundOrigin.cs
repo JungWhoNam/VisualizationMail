@@ -19,7 +19,7 @@ namespace VMail.Utils
         [SerializeField]
         private EventSystem es;
         [SerializeField]
-        private GraphicRaycaster gr;
+        private List<GraphicRaycaster> grs;
 
         [Space(10)]
         public AnimationCurve speedCurve;   // to change the speed when the camera is close to 0 in y. 
@@ -128,23 +128,25 @@ namespace VMail.Utils
         private bool IsInViewPort(Vector3 mousePos)
         {
             // for checking if it hits UI components.
-            List<RaycastResult> results = new List<RaycastResult>();
-            if (this.es != null && this.gr != null)
+            if (this.es != null && this.grs != null && this.grs.Count > 0)
             {
                 PointerEventData ped = new PointerEventData(this.es);
                 ped.position = Input.mousePosition;
-                this.gr.Raycast(ped, results);
-            }
 
-            if (results.Count <= 0)
-            {
-                // check if the mouse is within the camera's viewport.
-                Vector3 viewPort = this.cam.ScreenToViewportPoint(mousePos);
-                if ((viewPort.x >= 0f) && (viewPort.x <= 1f) && (viewPort.y >= 0f) && (viewPort.y <= 1f))
+                foreach (GraphicRaycaster gr in grs)
                 {
-                    return true;
+                    List<RaycastResult> results = new List<RaycastResult>();
+                    gr.Raycast(ped, results);
+                    if (results.Count > 0)
+                        return false;
                 }
             }
+
+            // check if the mouse is within the camera's viewport.
+            Vector3 viewPort = this.cam.ScreenToViewportPoint(mousePos);
+            if ((viewPort.x >= 0f) && (viewPort.x <= 1f) && (viewPort.y >= 0f) && (viewPort.y <= 1f))
+                return true;
+
             return false;
         }
 

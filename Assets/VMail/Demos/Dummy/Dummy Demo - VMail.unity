@@ -275,7 +275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 963194227}
   es: {fileID: 5503706153330687018}
-  gr: {fileID: 5503706153330687019}
+  grs:
+  - {fileID: 5503706153330687019}
   speedCurve:
     serializedVersion: 2
     m_Curve:
