@@ -34,7 +34,9 @@ This Unity project provides implemention of two V-Mail clients.
 
 # Integrating V-Mail into another Unity project
 ## Import V-Mail
-These directories should be in your project: `VMail`, `StreamingAssets/VMail, StreamingAssets/ffmpeg`, and `Plugins/Android`.
+> Check out the latest relase: https://github.com/JungWhoNam/VisualizationMail/releases
+
+Import `VisualizationMail_v*_*_*.unitypackage` into your project. These directories should be in your project: `VMail`, `StreamingAssets/VMail, StreamingAssets/ffmpeg`, and `Plugins/Android`.
 
 ## Configure Unity project
 ### Add `TextMeshPro`
