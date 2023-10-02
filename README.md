@@ -2,14 +2,14 @@
 V-Mail is  a framework of cross-platform applications, interactive techniques, and communication protocols for improved multi-person correspondence about spatial 3D datasets. Please check our paper: <em>V-Mail: 3D-Enabled Correspondence about Spatial Data on (Almost) All Your Devices  (https://doi.org/10.1109/TVCG.2022.3229017).</em>
 
 ## Related GitHub Repos
-* PC/Mac, Android V-Mail Clients
+* PC/Mac, Android V-Mail Clients (this repo)
     * https://github.com/JungWhoNam/VisualizationMail
 * V-Mail Server
     * https://github.com/JungWhoNam/VisualizationMailServer
-* Integration to a data visualization application
-    * https://github.com/JungWhoNam/BrainTensorVis/tree/vmail
+<!-- * Integration to a data visualization application
+    * https://github.com/JungWhoNam/BrainTensorVis/tree/vmail -->
 
-# PC/Mac, Android V-Mail Clients
+# Running PC/Mac, Android V-Mail Clients
 <div id="image-table">
     <table>
 	    <tr>
@@ -23,14 +23,18 @@ V-Mail is  a framework of cross-platform applications, interactive techniques, a
     </table>
 </div>
 
-This Unity project provides implemention of two V-Mail clients.
-* PC/Mac client integrated into a simple demo scene (left)
-    - `VMail/Demos/Dummy/Dummy Demo - VMail.unity`
+This Unity project provides implemention of two V-Mail clients.  The PC/Mac client is tested with Windows 11 and macOS Ventura. The Android client is tested with Samsung Galaxy S10 (running on Android version 12).
+
+Steps to run these clients:
+* First, start the server by following the steps written in [the server repo](https://github.com/JungWhoNam/VisualizationMailServer).
+* Open this project in Unity (this is built-in Unity 2022.3.3f1).
+* Start the demo PC/Mac client (left)
+    - Play `VMail/Demos/Dummy/Dummy Demo - VMail.unity`
     - Use left-mouse to rotate, mouse-wheel to zoom, mouse-wheel click to pan.
     - Press 'r' to change the object's color and scale.
     - Press down or up arrow key to change the geometry, e.g., cube, sphere, cylinder.
-* Android client (right)
-    - `VMail/_Scenes/VMail Mobile.unity`
+* Or start the Android client (right)
+    - Play `VMail/_Scenes/VMail Mobile.unity`
 
 # Integrating V-Mail into another Unity project
 ## Import V-Mail
@@ -93,16 +97,16 @@ Import `VisualizationMail_v*_*_*.unitypackage` into your project. These director
 
 # Changing the V-Mail Server
 Change values of these variables to link your own server.
-* Change `CodeDirURL` in `VMail/_Scripts/Servers_php/WebIntegration.cs`, e.g., "https://jungwhonam.com/VMails_Codes/".
-* Change `ServerDir` in `VMail/_Scripts/VMailWebManager.cs`, e.g., "https://jungwhonam.com/VMails_Codes/data/".
-* Change `rootDirNameServer` in `VMail/_Scripts/VMailWebManager.cs`, e.g., "data".
+* Change `CodeDirURL` in `VMail/_Scripts/Servers_php/WebIntegration.cs`; the default is "http://localhost/".
+* Change `ServerDir` in `VMail/_Scripts/VMailWebManager.cs`; the default is "http://localhost/data/".
+* Change `rootDirNameServer` in `VMail/_Scripts/VMailWebManager.cs`; the default is "data".
 
 # Deep Linking
 * See https://docs.unity3d.com/Manual/deep-linking.html for setting deep linking features for different platforms.
 * See `VMail/_Scripts/Utils/DeepLinkIntegration.cs` for processing a deep URL.
 
 # Known Issues
-‘ffmpeg’ can't be opened because it's from an unidentified developer.
+`ffmpeg` can't be opened because it's from an unidentified developer.
 * This error might appear when playing the demo scene in the Editor and uploading changes. This can be solved by running `Assets/StreamingAssets/ffmpeg/Mac/ffmpeg` in Terminal once. This should be not be a problem in build. 
 
 Deep linking does not work in a Windows build.
