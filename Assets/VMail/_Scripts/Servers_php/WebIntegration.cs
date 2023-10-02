@@ -9,17 +9,12 @@ using VMail.Utils.Web;
 using System.Collections.Generic;
 using System.Linq;
 
-// http://localhost/VMailBackend
-// https://www.youtube.com/watch?v=zSPn5uBU9bM&list=PLTm4FjoXO7nfn0jB0Ig6UbZU1pUHSLhRU&index=3&ab_channel=Creagines
-// use https://, instead of http:// (if _POST is empty)
-// https://answers.unity.com/questions/1468026/php-post-is-blank-when-i-send-variables-from-unity.html
 namespace VMail.Utils.Web
 {
     public class WebIntegration : MonoBehaviour
     {
-        // private static string CodeDirURL = "https://localhost/vmailbackend/";
-        public static readonly string CodeDirURL = "https://jungwhonam.com/VMails_Codes/";
-        //public static readonly string CodeDirURL = "http://sculptingvis.tacc.utexas.edu/php/VMails_Codes/";
+        //Make sure to put "/" at the end.
+        public static readonly string CodeDirURL = "http://localhost/";
 
         [SerializeField]
         private ProgressBar progressBar;

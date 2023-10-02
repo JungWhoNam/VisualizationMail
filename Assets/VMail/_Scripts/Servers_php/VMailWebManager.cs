@@ -12,8 +12,7 @@ namespace VMail.Utils.Web
     public class VMailWebManager : MonoBehaviour
     {
         //Make sure to put "/" at the end.
-        public static readonly string ServerDir = "https://jungwhonam.com/VMails_Codes/data/";
-        //public static readonly string ServerDir = "http://sculptingvis.tacc.utexas.edu/php/VMails_Codes/data/";
+        public static readonly string ServerDir = "http://localhost/data/";
 
         //public static readonly string rootDirNameServer = "../vmails";
         public static readonly string rootDirNameServer = "data";
