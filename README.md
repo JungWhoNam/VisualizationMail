@@ -26,7 +26,8 @@ If you use the code in this repository we would appreciate a citation of our pap
   github_url2 = {https://github.com/JungWhoNam/VisualizationMailServer},
   github_url3 = {https://github.com/JungWhoNam/BrainTensorVis/tree/vmail},
   video       = {https://youtu.be/SCTlARovRBY},
-}```
+}
+```
 
 ## Related GitHub Repos
 * PC/Mac, Android V-Mail Clients (this repo)
