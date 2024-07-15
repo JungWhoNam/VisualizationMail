@@ -1,6 +1,33 @@
 # Visualization Mail (V-Mail)
 V-Mail is  a framework of cross-platform applications, interactive techniques, and communication protocols for improved multi-person correspondence about spatial 3D datasets. Please check our paper: <em>V-Mail: 3D-Enabled Correspondence about Spatial Data on (Almost) All Your Devices  (https://doi.org/10.1109/TVCG.2022.3229017).</em>
 
+Jung Who Nam, Tobias Isenberg, and Daniel F. Keefe. V-Mail: 3D-Enabled Correspondence about Spatial Data on (Almost) All Your Devices. IEEE Transactions on Visualization and Computer Graphics, 30(4):1853–1867, April 2024. doi: [10.1109/TVCG.2022.3229017](https://doi.org/10.1109/TVCG.2022.3229017). An open access paper version is [available on HAL](https://hal.science/hal-03924707).
+
+If you use the code in this repository we would appreciate a citation of our paper.
+
+## Bibtex
+```
+@article{Nam:2024:V3C,
+  author      = {Nam, Jung Who and Tobias Isenberg and Daniel F. Keefe},
+  title       = {{V}-{M}ail: {3D}-Enabled Correspondence about Spatial Data on (Almost) All Your Devices},
+  journal     = {IEEE Transactions on Visualization and Computer Graphics},
+  year        = {2024},
+  volume      = {30},
+  number      = {4},
+  month       = apr,
+  pages       = {1853--1867},
+  doi         = {10.1109/TVCG.2022.3229017},
+  shortdoi    = {10/kt43},
+  doi_url     = {https://doi.org/10.1109/TVCG.2022.3229017},
+  oa_hal_url  = {https://hal.science/hal-03924707},
+  osf_url     = {https://osf.io/qehvs/},
+  url         = {https://www.sculpting-vis.org/VMail.html},
+  github_url  = {https://github.com/JungWhoNam/VisualizationMail},
+  github_url2 = {https://github.com/JungWhoNam/VisualizationMailServer},
+  github_url3 = {https://github.com/JungWhoNam/BrainTensorVis/tree/vmail},
+  video       = {https://youtu.be/SCTlARovRBY},
+}```
+
 ## Related GitHub Repos
 * PC/Mac, Android V-Mail Clients (this repo)
     * https://github.com/JungWhoNam/VisualizationMail
