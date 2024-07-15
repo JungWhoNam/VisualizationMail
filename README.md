@@ -1,5 +1,5 @@
 # Visualization Mail (V-Mail)
-V-Mail is  a framework of cross-platform applications, interactive techniques, and communication protocols for improved multi-person correspondence about spatial 3D datasets. Please check our paper: <em>V-Mail: 3D-Enabled Correspondence about Spatial Data on (Almost) All Your Devices  (https://doi.org/10.1109/TVCG.2022.3229017).</em>
+V-Mail is  a framework of cross-platform applications, interactive techniques, and communication protocols for improved multi-person correspondence about spatial 3D datasets. Please check out our paper: 
 
 Jung Who Nam, Tobias Isenberg, and Daniel F. Keefe. V-Mail: 3D-Enabled Correspondence about Spatial Data on (Almost) All Your Devices. IEEE Transactions on Visualization and Computer Graphics, 30(4):1853–1867, April 2024. doi: [10.1109/TVCG.2022.3229017](https://doi.org/10.1109/TVCG.2022.3229017). An open access paper version is [available on HAL](https://hal.science/hal-03924707).
 
