@@ -28,6 +28,7 @@ namespace VMail.Utils
         public float zoomSpeed = 2f;        // Speed of the camera going back and forth
         public bool rotWorldY = true;
         public bool panWorldY = false;
+        public bool rotAroundOrigin = true;
 
         [Space(10)]
         public UnityEvent onInteracted;
@@ -101,8 +102,8 @@ namespace VMail.Utils
             if (isRotating)
             {
                 float speed = speedFactor * turnSpeed;
-                this.cam.transform.RotateAround(Vector3.zero, this.cam.transform.right, -pos.y * speed);
-                this.cam.transform.RotateAround(Vector3.zero, this.rotWorldY ? Vector3.up : this.cam.transform.up, pos.x * speed);
+                this.cam.transform.RotateAround(this.rotAroundOrigin ? Vector3.zero : this.cam.transform.position, this.cam.transform.right, -pos.y * speed);
+                this.cam.transform.RotateAround(this.rotAroundOrigin ? Vector3.zero : this.cam.transform.position, this.rotWorldY ? Vector3.up : this.cam.transform.up, pos.x * speed);
             }
             if (isPanning)
             {
